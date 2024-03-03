@@ -4,17 +4,12 @@ create table bank_user
 (
     id      uuid not null,
     name    varchar (255),
+    name    jsonb,
     birth   timestamp,
-    account jsonb,
-    phone   varchar (255),
+    account_balance integer,
+    phone   jsonb,
     email    varchar (255),
+    password    varchar (255),
     primary key (id)
 );
 
-create table account
-(
-    id             uuid not null,
-    name            varchar (255),
-    description   varchar (255),
-    primary key (id)
-);
